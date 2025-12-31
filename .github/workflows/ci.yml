@@ -1,0 +1,56 @@
+name: CI Pipeline
+
+on:
+  push:
+
+jobs:
+  quality-assurance:
+    name: Quality & Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install Dependencies
+        run: |
+          cd src
+          uv sync --extra dev
+
+      - name: Cache Pre-commit hooks
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit-${{ runner.os }}-${{ hashFiles('.pre-commit-config.yaml') }}
+          restore-keys: |
+            pre-commit-${{ runner.os }}-
+
+      - name: Run Pre-commit (Linting & Static Analysis)
+        run: |
+          cd src
+          uv run pre-commit run --all-files --config ../.pre-commit-config.yaml
+
+      - name: Run Tests with Coverage
+        run: |
+              cd src
+              uv run coverage run -m unittest discover -s tests -t . -p "test_*.py"
+              uv run coverage xml
+
+      - name: Upload results to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: Ideological-Atlas/notifications
+          files: ./src/coverage.xml
+          fail_ci_if_error: true
+          verbose: true

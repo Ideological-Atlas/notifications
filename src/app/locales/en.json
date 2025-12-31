@@ -1,0 +1,22 @@
+{
+  "base": {
+    "contact_email": "support@ideologicalatlas.com",
+    "contact_text": "You can write to us at",
+    "doubts": "Any questions or issues?",
+    "footer_reason": "You are seeing this email because you are registered with an Ideological Atlas account. If you do not wish to continue receiving them, you can adjust your preferences on the platform or send an email to",
+    "help_text": "and we will help you with whatever you need.",
+    "rights": "Ideological Atlas. All rights reserved.",
+    "subject_prefix": "Ideological Atlas Notification",
+    "thanks": "Thank you very much for being part of the community!"
+  },
+  "register": {
+    "button": "Verify my account",
+    "fallback_text": "If the button doesn't work, you can also copy and paste the following link into your browser:",
+    "intro": "Thank you very much for registering at <strong>Ideological Atlas</strong>. We are delighted that people are increasingly interested in politics and exploring their ideas.",
+    "salutation": "Best regards,",
+    "subject": "Welcome to Ideological Atlas!",
+    "team": "The Ideological Atlas Team.",
+    "title": "Hello!",
+    "verify_text": "However, to access everything we can offer you, we need you to verify your profile."
+  }
+}

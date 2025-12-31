@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block subject %}{{ t.base.subject_prefix }}{% endblock %}</title>
+    <style type="text/css">
+        body { margin: 0; padding: 0; min-width: 100%; width: 100% !important; height: 100% !important;}
+        body, table, td, div, p, a { -webkit-font-smoothing: antialiased; text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; line-height: 1.5; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; border-spacing: 0; }
+        img { border: 0; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+        #outlook a { padding: 0; }
+        .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; }
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #f4f4f4;">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <table class="email-container" width="600" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #ffffff; max-width: 600px; width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0px 2px 8px rgba(0,0,0,0.05);">
+
+                    <tr>
+                        <td style="padding: 30px; color: #333333; font-size: 16px;">
+                            {% block content %}{% endblock %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #F8F9FA; padding: 25px; font-size: 12px; line-height: 1.6; color: #777777; border-top: 3px solid #1F4E79; text-align: center;">
+                            <p style="margin: 0 0 15px 0;">
+                                <strong>{{ t.base.doubts }}</strong><br>
+                                {{ t.base.contact_text }} <a href="mailto:{{ t.base.contact_email }}" style="color: #1F4E79; text-decoration: none; font-weight: bold;">{{ t.base.contact_email }}</a> {{ t.base.help_text }}
+                            </p>
+                            <p style="margin: 0 0 15px 0;">
+                                {{ t.base.thanks }}
+                            </p>
+                            <p style="margin: 0; font-size: 11px; color: #999999;">
+                                {{ t.base.footer_reason }} <a href="mailto:{{ t.base.contact_email }}" style="color: #1F4E79; text-decoration: none;">{{ t.base.contact_email }}</a>.
+                            </p>
+                             <p style="margin: 15px 0 0 0; font-size: 11px; color: #999999;">
+                                © {{ year | default('2025') }} {{ t.base.rights }}
+                            </p>
+                        </td>
+                    </tr>
+                    </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

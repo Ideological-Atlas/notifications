@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block subject %}{{ t.register.subject }}{% endblock %}
+
+{% block content %}
+<h1 style="color: #1F4E79; margin-top: 0;">{{ t.register.title }}</h1>
+<p>
+    {{ t.register.intro|safe }}
+</p>
+<p>
+    {{ t.register.verify_text }}
+<p>
+<p style="text-align: center; padding: 20px 0;">
+    <a href="{{backend_url}}/api/verify/{{user_uuid}}" style="background-color: #1F4E79; color: #ffffff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+        {{ t.register.button }}
+    </a>
+</p>
+<p>
+    {{ t.register.fallback_text }}<br>
+    <a href="{{backend_url}}/api/verify/{{user_uuid}}" style="color: #1F4E79; word-break: break-all; font-size: 14px;">{{backend_url}}/api/verify/{{user_uuid}}</a>
+</p>
+<p style="margin-top: 30px; border-top: 1px solid #eeeeee; padding-top: 20px;">
+    {{ t.register.salutation }}<br>
+    <strong>{{ t.register.team }}</strong>
+</p>
+{% endblock %}
