@@ -1,6 +1,7 @@
 # Ideological Atlas - Notifications Microservice
 
 ![CI](https://github.com/Ideological-Atlas/notifications/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/gh/Ideological-Atlas/notifications/graph/badge.svg?token=W9D4BVTK2Y)](https://codecov.io/gh/Ideological-Atlas/notifications)
 ![Python](https://img.shields.io/badge/python-3.14-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.128.0-009688.svg)
 ![License](https://img.shields.io/badge/license-GPLv3-green)
