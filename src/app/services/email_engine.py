@@ -53,7 +53,7 @@ class EmailService:
         logger.debug("Rendering template: %s", template_path)
 
         global_context = {
-            "backend_url": settings.BASE_BACKEND_URL,
+            "site_url": settings.BASE_SITE_URL,
             "project_name": settings.PROJECT_NAME,
             "t": translations,
         }

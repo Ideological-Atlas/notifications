@@ -13,7 +13,7 @@ class TestConfig(unittest.TestCase):
             "API_KEY": "mock_api_key",
             "FROM_EMAIL": "no-reply@test.com",
             "FROM_EMAIL_NAME": "Test Sender",
-            "BASE_BACKEND_URL": "http://localhost:8000",
+            "BASE_SITE_URL": "http://localhost:8000",
         }
         with patch.dict(os.environ, dummy_required_env, clear=True):
             reload(config)

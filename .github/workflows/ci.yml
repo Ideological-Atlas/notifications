@@ -46,7 +46,7 @@ jobs:
           API_KEY: "test_api_key"
           FROM_EMAIL: "test@example.com"
           FROM_EMAIL_NAME: "Test User"
-          BASE_BACKEND_URL: "http://localhost:8000"
+          BASE_SITE_URL: "http://localhost:8000"
         run: |
               cd src
               uv run coverage run -m unittest discover -s tests -t . -p "test_*.py"

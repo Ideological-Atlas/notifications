@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     API_KEY: str
     FROM_EMAIL: str
     FROM_EMAIL_NAME: str
-    BASE_BACKEND_URL: str
+    BASE_SITE_URL: str
     LOG_LEVEL: str = "INFO"
 
     TEMPLATE_FOLDER: str = "templates"

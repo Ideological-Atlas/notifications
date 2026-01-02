@@ -88,7 +88,7 @@ cp .env-dist .env
 | `PORT` | Service port | `5051` |
 | `LOG_LEVEL` | Logging verbosity | `INFO` |
 | `FROM_EMAIL` | Sender email address | `noreply@...` |
-| `BASE_BACKEND_URL` | URL for link generation | `localhost` |
+| `BASE_SITE_URL` | URL for link generation | `localhost` |
 
 ## 🐳 Docker Usage (Recommended)
 
