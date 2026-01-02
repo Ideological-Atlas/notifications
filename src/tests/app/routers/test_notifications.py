@@ -11,7 +11,8 @@ class TestNotificationsRouter(unittest.TestCase):
     def setUp(self):
         self.client = TestClient(app)
         self.url = "/notifications/send"
-        self.valid_headers = {"x-api-key": settings.API_KEY}
+        # Changed to Authorization header with Bearer scheme
+        self.valid_headers = {"Authorization": f"Bearer {settings.API_KEY}"}
         self.valid_payload = {
             "to_email": "user@example.com",
             "template_name": "test_template",
@@ -20,13 +21,13 @@ class TestNotificationsRouter(unittest.TestCase):
         }
 
     def test_send_notification_unauthorized(self):
-        headers = {"x-api-key": "wrong-key"}
+        # Changed to Authorization header
+        headers = {"Authorization": "Bearer wrong-key"}
         response = self.client.post(self.url, json=self.valid_payload, headers=headers)
 
         self.assertEqual(response.status_code, 401)
-        self.assertEqual(
-            response.json()["detail"], "Invalid Authentication Credentials"
-        )
+        # Updated expected error message
+        self.assertEqual(response.json()["detail"], "Invalid Credentials")
 
     def test_send_notification_bad_request(self):
         invalid_payload = {"template_name": "missing_email"}
