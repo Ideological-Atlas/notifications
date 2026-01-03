@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block subject %}{{ t.registration_reminder_30_days.subject }}{% endblock %}
+
+{% block content %}
+<h1 style="color: #D9534F; margin-top: 0;">{{ t.registration_reminder_30_days.title }}</h1>
+<p>
+    {{ t.registration_reminder_30_days.intro|safe }}
+</p>
+<p>
+    {{ t.registration_reminder_30_days.verify_text }}
+<p>
+<p style="text-align: center; padding: 20px 0;">
+    <a href="{{site_url}}/api/users/verify/{{user_uuid}}" style="background-color: #D9534F; color: #ffffff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+        {{ t.registration_reminder_30_days.button }}
+    </a>
+</p>
+<p>
+    {{ t.registration_reminder_30_days.fallback_text }}<br>
+    <a href="{{site_url}}/api/users/verify/{{user_uuid}}" style="color: #D9534F; word-break: break-all; font-size: 14px;">{{site_url}}/api/users/verify/{{user_uuid}}</a>
+</p>
+<p style="margin-top: 30px; border-top: 1px solid #eeeeee; padding-top: 20px;">
+    {{ t.registration_reminder_30_days.salutation }}<br>
+    <strong>{{ t.registration_reminder_30_days.team }}</strong>
+</p>
+{% endblock %}

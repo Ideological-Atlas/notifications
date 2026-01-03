@@ -72,10 +72,12 @@ test: clean-coverage install-dev-dependencies ## Run tests with standard unittes
 	@$(EXEC) uv run coverage xml
 	@$(EXEC) uv run coverage report
 
-trigger-test: ## Send a test email via Curl
-	@echo "Sending test email to $(FROM_EMAIL)..."
+trigger-test: ## Send a test email via Curl using .env variables
+	@echo "Sending test email to $(TEST_EMAIL)..."
+	@echo "Template: $(TEST_TEMPLATE)"
+	@echo "Language: $(TEST_LANGUAGE)"
 	@curl -X POST http://localhost:$(PORT)/notifications/send \
-		-H "Content-Type: application/json" \
-		-H "x-api-key: $(API_KEY)" \
-		-d '{"to_email": "$(TEST_EMAIL)", "template_name": "register", "language": "${TEST_LANGUAGE}", "context": {"user_uuid": "test-uuid-123"}}'
+	   -H "Content-Type: application/json" \
+	   -H "Authorization: Bearer $(API_KEY)" \
+	   -d '{"to_email": "$(TEST_EMAIL)", "template_name": "$(TEST_TEMPLATE)", "language": "$(TEST_LANGUAGE)", "context": $(TEST_CONTEXT)}'
 	@echo "\nDone."
