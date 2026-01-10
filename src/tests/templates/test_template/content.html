@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block subject %}Test Subject{% endblock %}
+
+{% block content %}
+<h1>Hello {{ key_from_context }}</h1>
+<p>{{ t.test.message }}</p>
+{% endblock %}

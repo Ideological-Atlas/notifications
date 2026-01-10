@@ -1,0 +1,61 @@
+{
+  "base": {
+    "contact_email": "support@ideologicalatlas.com",
+    "contact_text": "Contacta a",
+    "doubts": "\u00bfTienes dudas?",
+    "footer_reason": "Est\u00e1s recibiendo este correo porque te registraste en Ideological Atlas. Si no fuiste t\u00fa, contacta a",
+    "help_text": "para obtener ayuda.",
+    "rights": "Ideological Atlas. Todos los derechos reservados.",
+    "subject_prefix": "Ideological Atlas",
+    "thanks": "Gracias por usar nuestra plataforma."
+  },
+  "register": {
+    "button": "Verificar Cuenta",
+    "fallback_text": "Si el bot\u00f3n no funciona, copia y pega el siguiente enlace en tu navegador:",
+    "intro": "Gracias por unirte a nosotros. Estamos emocionados de tenerte a bordo.",
+    "salutation": "Saludos,",
+    "subject": "Verifica tu cuenta en Ideological Atlas",
+    "team": "El equipo de Ideological Atlas",
+    "title": "\u00a1Bienvenido a Ideological Atlas!",
+    "verify_text": "Para comenzar, por favor verifica tu direcci\u00f3n de correo electr\u00f3nico haciendo clic en el bot\u00f3n de abajo:"
+  },
+  "registration_reminder_30_days": {
+    "button": "Verificar y Salvar Cuenta",
+    "fallback_text": "Enlace directo:",
+    "intro": "Ha pasado un mes desde tu registro. Para mantener nuestra base de datos limpia, las cuentas no verificadas se eliminan peri\u00f3dicamente.",
+    "salutation": "Saludos,",
+    "subject": "\u00daltima oportunidad para verificar tu cuenta",
+    "team": "El equipo de Ideological Atlas",
+    "title": "Acci\u00f3n requerida",
+    "verify_text": "Si a\u00fan deseas acceder a Ideological Atlas, por favor verifica tu cuenta hoy mismo:"
+  },
+  "registration_reminder_3_days": {
+    "button": "Completar Verificaci\u00f3n",
+    "fallback_text": "O utiliza este enlace:",
+    "intro": "Notamos que te registraste hace unos d\u00edas pero a\u00fan no has verificado tu cuenta.",
+    "salutation": "Nos vemos dentro,",
+    "subject": "Recordatorio: Verifica tu cuenta",
+    "team": "El equipo de Ideological Atlas",
+    "title": "\u00bfOlvidaste algo?",
+    "verify_text": "Es necesario verificar tu correo para acceder a todas las funcionalidades. Solo te tomar\u00e1 un segundo:"
+  },
+  "registration_reminder_7_days": {
+    "button": "Activar Cuenta Ahora",
+    "fallback_text": "Enlace alternativo:",
+    "intro": "Ha pasado una semana desde tu registro. Tu perfil ideol\u00f3gico est\u00e1 listo para ser explorado, pero necesitamos que confirmes tu correo.",
+    "salutation": "Atentamente,",
+    "subject": "Tu cuenta te est\u00e1 esperando",
+    "team": "El equipo de Ideological Atlas",
+    "title": "\u00a1Te echamos de menos!",
+    "verify_text": "Haz clic abajo para activar tu cuenta ahora:"
+  },
+  "user_deleted_due_no_verification": {
+    "button": "Registrarse de nuevo",
+    "intro": "Como mencionamos en nuestros recordatorios anteriores, tu cuenta ha sido eliminada de nuestra base de datos debido a la falta de verificaci\u00f3n tras 31 d\u00edas.",
+    "re_register_text": "Si deseas utilizar Ideological Atlas en el futuro, por favor reg\u00edstrate nuevamente y verifica tu correo.",
+    "salutation": "Saludos,",
+    "subject": "Aviso de eliminaci\u00f3n de cuenta",
+    "team": "El equipo de Ideological Atlas",
+    "title": "Tu cuenta ha sido eliminada"
+  }
+}

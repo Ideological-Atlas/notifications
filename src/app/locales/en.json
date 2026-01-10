@@ -1,0 +1,61 @@
+{
+  "base": {
+    "contact_email": "support@ideologicalatlas.com",
+    "contact_text": "Contact",
+    "doubts": "Questions?",
+    "footer_reason": "You are receiving this email because you signed up for Ideological Atlas. If this wasn't you, please contact",
+    "help_text": "for help.",
+    "rights": "Ideological Atlas. All rights reserved.",
+    "subject_prefix": "Ideological Atlas",
+    "thanks": "Thanks for using our platform."
+  },
+  "register": {
+    "button": "Verify Account",
+    "fallback_text": "If the button doesn't work, copy and paste the link below into your browser:",
+    "intro": "Thanks for joining us. We are excited to have you on board.",
+    "salutation": "Cheers,",
+    "subject": "Verify your Ideological Atlas account",
+    "team": "The Ideological Atlas Team",
+    "title": "Welcome to Ideological Atlas!",
+    "verify_text": "To get started, please verify your email address by clicking the button below:"
+  },
+  "registration_reminder_30_days": {
+    "button": "Verify and Save Account",
+    "fallback_text": "Direct link:",
+    "intro": "It's been a month since you signed up. To keep our database clean, unverified accounts are periodically removed.",
+    "salutation": "Regards,",
+    "subject": "Last chance to verify your account",
+    "team": "The Ideological Atlas Team",
+    "title": "Action Required",
+    "verify_text": "If you still wish to access Ideological Atlas, please verify your account today:"
+  },
+  "registration_reminder_3_days": {
+    "button": "Complete Verification",
+    "fallback_text": "Or use this link:",
+    "intro": "We noticed you signed up a few days ago but haven't verified your account yet.",
+    "salutation": "See you inside,",
+    "subject": "Reminder: Verify your account",
+    "team": "The Ideological Atlas Team",
+    "title": "Did you forget something?",
+    "verify_text": "Verifying your email is necessary to access all features. It only takes a second:"
+  },
+  "registration_reminder_7_days": {
+    "button": "Activate Account Now",
+    "fallback_text": "Alternative link:",
+    "intro": "It's been a week since you signed up. Your ideological profile is ready to be explored, but we need you to confirm your email.",
+    "salutation": "Best regards,",
+    "subject": "Your account is waiting for you",
+    "team": "The Ideological Atlas Team",
+    "title": "We miss you!",
+    "verify_text": "Click below to activate your account now:"
+  },
+  "user_deleted_due_no_verification": {
+    "button": "Register Again",
+    "intro": "As mentioned in our previous reminders, your account has been removed from our database due to lack of verification after 31 days.",
+    "re_register_text": "If you wish to use Ideological Atlas in the future, please register again and verify your email.",
+    "salutation": "Regards,",
+    "subject": "Account Deletion Notice",
+    "team": "The Ideological Atlas Team",
+    "title": "Your account has been deleted"
+  }
+}

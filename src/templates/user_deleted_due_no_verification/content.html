@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block subject %}{{ t.user_deleted_due_no_verification.subject }}{% endblock %}
+
+{% block content %}
+<h1 style="color: #555555; margin-top: 0;">{{ t.user_deleted_due_no_verification.title }}</h1>
+<p>
+    {{ t.user_deleted_due_no_verification.intro|safe }}
+</p>
+<p>
+    {{ t.user_deleted_due_no_verification.re_register_text }}
+<p>
+<p style="text-align: center; padding: 20px 0;">
+    <a href="{{site_url}}/register" style="background-color: #555555; color: #ffffff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+        {{ t.user_deleted_due_no_verification.button }}
+    </a>
+</p>
+<p style="margin-top: 30px; border-top: 1px solid #eeeeee; padding-top: 20px;">
+    {{ t.user_deleted_due_no_verification.salutation }}<br>
+    <strong>{{ t.user_deleted_due_no_verification.team }}</strong>
+</p>
+{% endblock %}
