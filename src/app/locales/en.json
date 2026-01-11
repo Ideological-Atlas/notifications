@@ -19,6 +19,14 @@
     "title": "Welcome to Ideological Atlas!",
     "verify_text": "To get started, please verify your email address by clicking the button below:"
   },
+  "register_google": {
+    "button": "Go to App",
+    "intro": "You have successfully registered using your Google account. Your identity has been automatically verified, so you can now access all features.",
+    "salutation": "Best regards,",
+    "subject": "Welcome to Ideological Atlas!",
+    "team": "The Ideological Atlas Team",
+    "title": "Registration Successful"
+  },
   "registration_reminder_30_days": {
     "button": "Verify and Save Account",
     "fallback_text": "Direct link:",

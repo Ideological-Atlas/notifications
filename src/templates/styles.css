@@ -1,0 +1,67 @@
+/* Global Colors */
+:root {
+    --primary-color: #1F4E79;
+    --danger-color: #D9534F;
+    --neutral-color: #555555;
+    --white-color: #ffffff;
+    --bg-body: #f4f4f4;
+    --text-main: #333333;
+    --border-color: #eeeeee;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Headings */
+h1 {
+    margin-top: 0;
+}
+
+.text-primary { color: #1F4E79; }
+.text-danger { color: #D9534F; }
+.text-neutral { color: #555555; }
+
+/* Buttons */
+.btn {
+    color: #ffffff !important;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-primary { background-color: #1F4E79; }
+.btn-danger { background-color: #D9534F; }
+.btn-neutral { background-color: #555555; }
+
+/* Links */
+.link-fallback {
+    word-break: break-all;
+    font-size: 14px;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.py-20 { padding: 20px 0; }
+.mt-30 { margin-top: 30px; }
+.border-top { border-top: 1px solid #eeeeee; }
+.pt-20 { padding-top: 20px; }
+
+/* Layout specific */
+.email-container {
+    background-color: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+}
+
+.content-cell {
+    padding: 30px;
+    color: #333333;
+    font-size: 16px;
+}
