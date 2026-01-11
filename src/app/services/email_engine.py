@@ -1,5 +1,6 @@
 import json
 import logging
+from datetime import datetime
 from pathlib import Path
 
 import resend
@@ -56,6 +57,7 @@ class EmailService:
             "site_url": settings.BASE_SITE_URL,
             "project_name": settings.PROJECT_NAME,
             "t": translations,
+            "year": datetime.now().year,
         }
         final_context = {**global_context, **specific_context}
 

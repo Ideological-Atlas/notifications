@@ -19,6 +19,14 @@
     "title": "\u00a1Bienvenido a Ideological Atlas!",
     "verify_text": "Para comenzar, por favor verifica tu direcci\u00f3n de correo electr\u00f3nico haciendo clic en el bot\u00f3n de abajo:"
   },
+  "register_google": {
+    "button": "Ir a la aplicaci\u00f3n",
+    "intro": "Te has registrado correctamente utilizando tu cuenta de Google. Tu identidad ha sido verificada autom\u00e1ticamente, por lo que ya puedes acceder a todas las funcionalidades.",
+    "salutation": "Un saludo,",
+    "subject": "\u00a1Bienvenido a Ideological Atlas!",
+    "team": "El equipo de Ideological Atlas",
+    "title": "Registro Exitoso"
+  },
   "registration_reminder_30_days": {
     "button": "Verificar y Salvar Cuenta",
     "fallback_text": "Enlace directo:",

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block subject %}{{ t.register_google.subject }}{% endblock %}
+
+{% block content %}
+<h1 style="color: #1F4E79; margin-top: 0;">{{ t.register_google.title }}</h1>
+<p>
+    {{ t.register_google.intro|safe }}
+</p>
+<p style="text-align: center; padding: 20px 0;">
+    <a href="{{site_url}}" style="background-color: #1F4E79; color: #ffffff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+        {{ t.register_google.button }}
+    </a>
+</p>
+<p style="margin-top: 30px; border-top: 1px solid #eeeeee; padding-top: 20px;">
+    {{ t.register_google.salutation }}<br>
+    <strong>{{ t.register_google.team }}</strong>
+</p>
+{% endblock %}
