@@ -8,6 +8,7 @@ from fastapi import HTTPException
 from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 
 from app.core.config import settings
+from app.core.theme import theme
 
 logger = logging.getLogger(__name__)
 
@@ -58,6 +59,7 @@ class EmailService:
             "project_name": settings.PROJECT_NAME,
             "t": translations,
             "year": datetime.now().year,
+            "theme": theme,
         }
         final_context = {**global_context, **specific_context}
 

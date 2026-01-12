@@ -5,46 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block subject %}{{ t.base.subject_prefix }}{% endblock %}</title>
     <style type="text/css">
-        body { margin: 0; padding: 0; min-width: 100%; width: 100% !important; height: 100% !important;}
-        body, table, td, div, p, a { -webkit-font-smoothing: antialiased; text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; line-height: 1.5; }
-        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; border-spacing: 0; }
-        img { border: 0; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
-        #outlook a { padding: 0; }
-        .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; }
-        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+        /* Client-specific resets */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; }
+
+        /* General Resets */
+        body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; }
+
+        /* Theme Styles */
+        /* Body has NO background color set, so it uses the email client default */
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: {{ theme.foreground }}; }
+        a { color: {{ theme.primary }}; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #f4f4f4;">
-        <tr>
-            <td align="center" style="padding: 20px 0;">
-                <table class="email-container" width="600" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #ffffff; max-width: 600px; width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0px 2px 8px rgba(0,0,0,0.05);">
+<body style="margin: 0; padding: 0;">
 
-                    <tr>
-                        <td style="padding: 30px; color: #333333; font-size: 16px;">
-                            {% block content %}{% endblock %}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="background-color: #F8F9FA; padding: 25px; font-size: 12px; line-height: 1.6; color: #777777; border-top: 3px solid #1F4E79; text-align: center;">
-                            <p style="margin: 0 0 15px 0;">
-                                <strong>{{ t.base.doubts }}</strong><br>
-                                {{ t.base.contact_text }} <a href="mailto:{{ t.base.contact_email }}" style="color: #1F4E79; text-decoration: none; font-weight: bold;">{{ t.base.contact_email }}</a> {{ t.base.help_text }}
-                            </p>
-                            <p style="margin: 0 0 15px 0;">
-                                {{ t.base.thanks }}
-                            </p>
-                            <p style="margin: 0; font-size: 11px; color: #999999;">
-                                {{ t.base.footer_reason }} <a href="mailto:{{ t.base.contact_email }}" style="color: #1F4E79; text-decoration: none;">{{ t.base.contact_email }}</a>.
-                            </p>
-                             <p style="margin: 15px 0 0 0; font-size: 11px; color: #999999;">
-                                © {{ year | default('2025') }} {{ t.base.rights }}
-                            </p>
-                        </td>
-                    </tr>
+    <div style="width: 100%;">
+        <table role="presentation" style="width: 100%; border-collapse: collapse; border: 0; border-spacing: 0;">
+            <tr>
+                <td align="center" style="padding: 40px 0;">
+
+                    <table role="presentation" style="width: 100%; max-width: 600px; border-collapse: collapse; border: 0; border-spacing: 0;">
+                        <tr>
+                            <td style="padding: 0 0 20px 0; text-align: center;">
+                                <img src="https://ideologicalatlas.com/logo.png" alt="{{ project_name }}" width="48" height="48" style="display: block; margin: 0 auto; border: 0; outline: none; text-decoration: none;">
+                            </td>
+                        </tr>
                     </table>
-            </td>
-        </tr>
-    </table>
+
+                    <table role="presentation" style="width: 100%; max-width: 600px; border-collapse: separate; border-spacing: 0; background-color: {{ theme.card }}; border-radius: 12px; border: 1px solid {{ theme.border }}; overflow: hidden; box-shadow: 0px 4px 20px rgba(0,0,0,0.25);">
+                        <tr>
+                            <td style="padding: 40px; color: {{ theme.foreground }}; font-size: 16px; line-height: 1.6;">
+                                {% block content %}{% endblock %}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding: 30px; background-color: {{ theme.secondary }}; border-top: 1px solid {{ theme.border }}; font-size: 13px; line-height: 1.6; color: {{ theme.muted_foreground }}; text-align: center;">
+                                <p style="margin: 0 0 15px 0;">
+                                    <strong style="color: {{ theme.foreground }};">{{ t.base.doubts }}</strong><br>
+                                    {{ t.base.contact_text }} <a href="mailto:{{ t.base.contact_email }}" style="color: {{ theme.primary }}; font-weight: bold;">{{ t.base.contact_email }}</a> {{ t.base.help_text }}
+                                </p>
+                                <p style="margin: 0 0 15px 0;">
+                                    {{ t.base.thanks }}
+                                </p>
+                                <p style="margin: 0; font-size: 12px; color: {{ theme.muted_foreground }};">
+                                    {{ t.base.footer_reason }} <a href="mailto:{{ t.base.contact_email }}" style="color: {{ theme.primary }};">{{ t.base.contact_email }}</a>.
+                                </p>
+                                 <p style="margin: 15px 0 0 0; font-size: 12px; color: {{ theme.muted_foreground }};">
+                                    © {{ year | default('2026') }} {{ t.base.rights }}
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table role="presentation" style="width: 100%; max-width: 600px; border-collapse: collapse; border: 0; border-spacing: 0;">
+                        <tr>
+                            <td style="padding: 20px 0;"></td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
