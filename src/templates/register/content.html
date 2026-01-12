@@ -3,24 +3,28 @@
 {% block subject %}{{ t.register.subject }}{% endblock %}
 
 {% block content %}
-<h1 style="color: #1F4E79; margin-top: 0;">{{ t.register.title }}</h1>
-<p>
+<h1 style="color: {{ theme.foreground }}; margin-top: 0; font-size: 24px; font-weight: bold; text-align: center;">{{ t.register.title }}</h1>
+<p style="color: #cbd5e1; text-align: center; margin-bottom: 30px;">
     {{ t.register.intro|safe }}
 </p>
-<p>
-    {{ t.register.verify_text }}
-<p>
-<p style="text-align: center; padding: 20px 0;">
-    <a href="{{site_url}}/api/users/verify/{{user_uuid}}" style="background-color: #1F4E79; color: #ffffff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+
+<p style="text-align: center; margin-bottom: 30px;">
+    <a href="{{site_url}}/verify/{{verification_token}}" style="background-color: {{ theme.primary }}; color: {{ theme.primary_foreground }}; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; font-size: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
         {{ t.register.button }}
     </a>
 </p>
-<p>
-    {{ t.register.fallback_text }}<br>
-    <a href="{{site_url}}/api/users/verify/{{user_uuid}}" style="color: #1F4E79; word-break: break-all; font-size: 14px;">{{site_url}}/api/users/verify/{{user_uuid}}</a>
+
+<p style="font-size: 14px; color: {{ theme.muted_foreground }}; border-top: 1px solid {{ theme.border }}; padding-top: 20px;">
+    {{ t.register.verify_text }}
 </p>
-<p style="margin-top: 30px; border-top: 1px solid #eeeeee; padding-top: 20px;">
+
+<p style="font-size: 14px; color: {{ theme.muted_foreground }};">
+    {{ t.register.fallback_text }}<br>
+    <a href="{{site_url}}/verify/{{verification_token}}" style="color: {{ theme.primary }}; word-break: break-all; text-decoration: none;">{{site_url}}/verify/{{verification_token}}</a>
+</p>
+
+<p style="margin-top: 30px; color: {{ theme.foreground }};">
     {{ t.register.salutation }}<br>
-    <strong>{{ t.register.team }}</strong>
+    <strong style="color: {{ theme.primary }};">{{ t.register.team }}</strong>
 </p>
 {% endblock %}

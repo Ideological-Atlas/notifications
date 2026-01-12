@@ -167,7 +167,7 @@ uv run uvicorn main:app --host 0.0.0.0 --port 5051 --reload
   "template_name": "register",
   "language": "es",
   "context": {
-    "user_uuid": "123e4567-e89b-12d3-a456-426614174000",
+    "verification_token": "EXAMPLE-TOKEN",
     "name": "Jane Doe"
   }
 }
@@ -189,7 +189,7 @@ Or manually:
 curl -X POST http://localhost:5051/notifications/send \
    -H "Content-Type: application/json" \
    -H "x-api-key: YOUR_SECRET_KEY" \
-   -d '{"to_email": "test@test.com", "template_name": "register", "language": "en", "context": {"user_uuid": "123"}}'
+   -d '{"to_email": "test@test.com", "template_name": "register", "language": "en", "context": {"verification_token": "EXAMPLE-TOKEN"}}'
 
 ```
 
