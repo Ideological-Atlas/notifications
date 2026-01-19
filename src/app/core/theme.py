@@ -10,7 +10,7 @@ class Theme:
     card_foreground: str = "#f8fafc"
     border: str = "#1e293b"
 
-    primary: str = "#338f39"
+    primary: str = "#16a34a"
     primary_foreground: str = "#ffffff"
 
     secondary: str = "#1e293b"

@@ -57,6 +57,17 @@
     "title": "We miss you!",
     "verify_text": "Click below to activate your account now:"
   },
+  "reset_password": {
+    "button": "Reset Password",
+    "expiry": "This link will expire in 30 minutes.",
+    "fallback_text": "If the button doesn't work, copy and paste the following link into your browser:",
+    "ignore": "If you didn't request this change, you can safely ignore this email. Your password will not change.",
+    "intro": "We received a request to reset the password for your Ideological Atlas account.",
+    "salutation": "Regards,",
+    "subject": "Password Reset Request",
+    "team": "The Ideological Atlas Team",
+    "title": "Reset Your Password"
+  },
   "user_deleted_due_no_verification": {
     "button": "Register Again",
     "intro": "As mentioned in our previous reminders, your account has been removed from our database due to lack of verification after 31 days.",
