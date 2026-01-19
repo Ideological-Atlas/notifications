@@ -57,6 +57,17 @@
     "title": "\u00a1Te echamos de menos!",
     "verify_text": "Haz clic abajo para activar tu cuenta ahora:"
   },
+  "reset_password": {
+    "button": "Restablecer contrase\u00f1a",
+    "expiry": "Este enlace expirar\u00e1 en 30 minutos.",
+    "fallback_text": "Si el bot\u00f3n no funciona, copia y pega el siguiente enlace en tu navegador:",
+    "ignore": "Si no has solicitado este cambio, puedes ignorar este correo con seguridad. Tu contrase\u00f1a no cambiar\u00e1.",
+    "intro": "Hemos recibido una solicitud para restablecer la contrase\u00f1a de tu cuenta en Ideological Atlas.",
+    "salutation": "Saludos,",
+    "subject": "Restablecimiento de contrase\u00f1a",
+    "team": "El equipo de Ideological Atlas",
+    "title": "Restablece tu contrase\u00f1a"
+  },
   "user_deleted_due_no_verification": {
     "button": "Registrarse de nuevo",
     "intro": "Como mencionamos en nuestros recordatorios anteriores, tu cuenta ha sido eliminada de nuestra base de datos debido a la falta de verificaci\u00f3n tras 31 d\u00edas.",
