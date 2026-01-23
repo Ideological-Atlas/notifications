@@ -16,3 +16,10 @@ services:
       options:
         max-size: 50m
         max-file: "2"
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    name: ${PROJECT_NAME}_network
+    driver: bridge
