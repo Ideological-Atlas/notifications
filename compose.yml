@@ -17,9 +17,9 @@ services:
         max-size: 50m
         max-file: "2"
     networks:
-      - app_network
+      - global_net
 
 networks:
-  app_network:
-    name: ${PROJECT_NAME}_network
-    driver: bridge
+  global_net:
+    name: ideological_global_network
+    external: true
